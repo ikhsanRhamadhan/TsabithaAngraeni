@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Aria Rahayu — Arsitek & Desainer. Portfolio arsitektur tropis, sustainable design, dan karya kontemporer Indonesia."/>
+  <title>Aria Rahayu — Architect & Designer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+
+    <a href="#home" class="nav-logo">Tsabitha <span>Angraeni</span></a>
+
+    <ul class="nav-links">
+      <li><a href="#home"         class="active">Home</a></li>
+      <li><a href="#about"                      >About</a></li>
+      <li><a href="#skills"                     >Skills</a></li>
+      <li><a href="#portfolio"                  >Portfolio</a></li>
+      <li><a href="#achievements"               >Awards</a></li>
+      <li><a href="#gallery"                    >Gallery</a></li>
+      <li><a href="#contact"                    >Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-btn" id="themeBtn" title="Toggle dark mode">🌙</button>
+      <a href="#" class="nav-cta" onclick="downloadCV(event)">Download CV</a>
+    </div>
+
+    <!-- Hamburger (mobile) -->
+    <div class="hamburger" id="hamburger" onclick="openMobileNav()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+</nav>
+
+<!-- Mobile Navigation -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" onclick="closeMobileNav()">✕</button>
+  <a href="#home"         onclick="closeMobileNav()">Home</a>
+  <a href="#about"        onclick="closeMobileNav()">About</a>
+  <a href="#skills"       onclick="closeMobileNav()">Skills</a>
+  <a href="#portfolio"    onclick="closeMobileNav()">Portfolio</a>
+  <a href="#achievements" onclick="closeMobileNav()">Awards</a>
+  <a href="#gallery"      onclick="closeMobileNav()">Gallery</a>
+  <a href="#contact"      onclick="closeMobileNav()">Contact</a>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     SECTION 1 — HERO
+══════════════════════════════════════ -->
+<section id="home">
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-blob"></div>
+
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- Left: Text -->
+      <div class="hero-left">
+        <div class="hero-eyebrow-row">
+          <div class="hero-eyebrow-line"></div>
+          <span class="hero-eyebrow-text">Architect &amp; Designer</span>
+        </div>
+
+        <h1 class="hero-h1 display">
+          Tsabitha<br><em>Angraeni</em>
+        </h1>
+
+        <p class="hero-role">B.Arch · Universitas Indonesia · 2024</p>
+
+        <p class="hero-desc">
+          Menciptakan ruang yang bukan sekadar indah secara visual, tetapi juga bermakna,
+          berkelanjutan, dan merespons konteks tropis Indonesia dengan sensibilitas arsitektur kontemporer.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#" class="btn-primary" onclick="downloadCV(event)">
+            ↓ Download CV
+          </a>
+          <a href="#portfolio" class="btn-secondary">
+            View Portfolio →
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-val">12<span>+</span></div>
+            <div class="hero-stat-lbl">Projects</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-val">4<span>yr</span></div>
+            <div class="hero-stat-lbl">Experience</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-val">6<span>+</span></div>
+            <div class="hero-stat-lbl">Awards</div>
+          </div>
+        </div>
+
+        <div class="hero-scroll">
+          <div class="scroll-line"></div>
+          <span class="scroll-text">Scroll to explore</span>
+        </div>
+      </div>
+
+      <!-- Right: Image -->
+      <div class="hero-right">
+        <div class="hero-img-frame">
+          <img
+            src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=900&q=80&fit=crop"
+            alt="Architecture project"
+            loading="eager"
+          />
+        </div>
+        <div class="hero-img-badge">
+          <div class="badge-dot"></div>
+          <div>
+            <div class="badge-text-top">Available for</div>
+            <div class="badge-text-bot">New Projects</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     SECTION 2 — ABOUT ME
+══════════════════════════════════════ -->
+<section id="about" class="section">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <div class="inner">
+        <div>
+          <div class="label">01 — About Me</div>
+          <h2 class="display display-md" style="margin-top:.5rem">Tentang Saya</h2>
+        </div>
+        <span class="section-num">01</span>
+      </div>
+    </div>
+
+    <div class="about-grid">
+
+      <!-- Photo -->
+      <div class="about-photo-wrap reveal">
+        <div class="about-photo">
+          <img
+            src="image/ts.jpeg"
+            alt="Aria Rahayu"
+            loading="lazy"
+          />
+        </div>
+        <div class="about-photo-badge">
+          <div class="badge-num">∞</div>
+          <div class="badge-txt">Design First</div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="about-content reveal reveal-delay-2">
+
+        <p class="about-quote">
+          "Arsitektur adalah seni yang membentuk kehidupan — setiap garis, ruang, dan cahaya memiliki ceritanya sendiri."
+        </p>
+
+        <p class="about-text">
+          Saya adalah arsitek muda yang bersemangat dalam menciptakan desain yang merespons lingkungan, budaya, dan kebutuhan manusia. Dengan latar belakang pendidikan di Universitas Indonesia dan pengalaman magang di beberapa studio arsitektur terkemuka, saya menggabungkan pendekatan teknis yang kuat dengan sensibilitas estetika yang tajam.
+        </p>
+        <p class="about-text">
+          Fokus saya adalah pada arsitektur tropis berkelanjutan — memanfaatkan iklim, vegetasi, dan material lokal untuk menciptakan bangunan yang nyaman, efisien energi, dan berakar pada konteks budaya Indonesia.
+        </p>
+
+        <!-- Education -->
+        <div style="margin-bottom:2rem">
+          <div class="edu-title">Pendidikan</div>
+          <div class="edu-item">
+            <div>
+              <div class="edu-school">Universitas Indonesia</div>
+              <div class="edu-degree">S1 Arsitektur — Cum Laude</div>
+            </div>
+            <div class="edu-year">2024</div>
+          </div>
+          <div class="edu-item">
+            <div>
+              <div class="edu-school">RWTH Aachen University</div>
+              <div class="edu-degree">Exchange Student — Architecture</div>
+            </div>
+            <div class="edu-year">2022</div>
+          </div>
+          <div class="edu-item">
+            <div>
+              <div class="edu-school">SMA Negeri 8 Jakarta</div>
+              <div class="edu-degree">IPA — Science Track</div>
+            </div>
+            <div class="edu-year">2020</div>
+          </div>
+        </div>
+
+        <!-- Interests -->
+        <div class="edu-title">Minat Desain</div>
+        <div class="interest-tags">
+          <span class="interest-tag">🌿 Sustainable Architecture</span>
+          <span class="interest-tag">☀️ Tropical Design</span>
+          <span class="interest-tag">🏙️ Urban Housing</span>
+          <span class="interest-tag">🎨 Parametric Design</span>
+          <span class="interest-tag">♻️ Adaptive Reuse</span>
+          <span class="interest-tag">🌱 Biophilic Design</span>
+          <span class="interest-tag">📐 Minimalist Form</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     SECTION 3 — SKILLS
+══════════════════════════════════════ -->
+<section id="skills" class="section">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <div class="inner">
+        <div>
+          <div class="label">02 — Skills</div>
+          <h2 class="display display-md" style="margin-top:.5rem">Keahlian</h2>
+        </div>
+        <span class="section-num">02</span>
+      </div>
+    </div>
+
+    <div class="skills-layout">
+
+      <!-- Intro -->
+      <div class="skills-intro reveal">
+        <div class="label" style="margin-bottom:1rem">Software &amp; Tools</div>
+        <p class="body-lg">
+          Mahir dalam ekosistem perangkat lunak arsitektur modern, dari modeling 3D hingga presentasi visual yang memukau.
+        </p>
+        <div style="margin-top:2.5rem">
+          <div class="label" style="margin-bottom:1rem">Soft Skills</div>
+          <div class="interest-tags">
+            <span class="interest-tag">Design Thinking</span>
+            <span class="interest-tag">Project Management</span>
+            <span class="interest-tag">Client Communication</span>
+            <span class="interest-tag">Team Leadership</span>
+            <span class="interest-tag">Presentation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid -->
+      <div class="skills-grid reveal reveal-delay-2">
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">AutoCAD</span>
+            <span class="skill-pct">95%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+          <div class="skill-tags">
+            <span class="skill-tag">2D Drawing</span>
+            <span class="skill-tag">Technical Plans</span>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">SketchUp</span>
+            <span class="skill-pct">90%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill accent" data-width="90"></div></div>
+          <div class="skill-tags">
+            <span class="skill-tag">3D Modeling</span>
+            <span class="skill-tag">V-Ray</span>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">Lumion</span>
+            <span class="skill-pct">88%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+          <div class="skill-tags">
+            <span class="skill-tag">Rendering</span>
+            <span class="skill-tag">Walkthrough</span>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">Revit</span>
+            <span class="skill-pct">82%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill accent" data-width="82"></div></div>
+          <div class="skill-tags">
+            <span class="skill-tag">BIM</span>
+            <span class="skill-tag">MEP Coordination</span>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">Photoshop</span>
+            <span class="skill-pct">92%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+          <div class="skill-tags">
+            <span class="skill-tag">Post-processing</span>
+            <span class="skill-tag">Collage</span>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">Illustrator</span>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill accent" data-width="85"></div></div>
+          <div class="skill-tags">
+            <span class="skill-tag">Diagrams</span>
+            <span class="skill-tag">Layout</span>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">Rhino + Grasshopper</span>
+            <span class="skill-pct">75%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+          <div class="skill-tags">
+            <span class="skill-tag">Parametric</span>
+            <span class="skill-tag">Scripting</span>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">InDesign</span>
+            <span class="skill-pct">88%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill accent" data-width="88"></div></div>
+          <div class="skill-tags">
+            <span class="skill-tag">Portfolio</span>
+            <span class="skill-tag">Publishing</span>
+          </div>
+        </div>
+
+      </div><!-- /skills-grid -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     SECTION 4 — PORTFOLIO
+══════════════════════════════════════ -->
+<section id="portfolio" class="section">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <div class="inner">
+        <div>
+          <div class="label">03 — Portfolio</div>
+          <h2 class="display display-md" style="margin-top:.5rem">Proyek Pilihan</h2>
+        </div>
+        <span class="section-num">03</span>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="portfolio-filter reveal">
+      <button class="filter-btn active"   data-filter="all"        >All Projects</button>
+      <button class="filter-btn"          data-filter="residential">Residential</button>
+      <button class="filter-btn"          data-filter="commercial" >Commercial</button>
+      <button class="filter-btn"          data-filter="cultural"   >Cultural</button>
+      <button class="filter-btn"          data-filter="urban"      >Urban</button>
+    </div>
+
+    <!-- Grid -->
+    <div class="portfolio-grid" id="portfolioGrid">
+
+      <div class="project-card reveal" data-cat="residential" onclick="openProject(0)">
+        <img class="project-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80&fit=crop" alt="Rumah Tropis Bogor" loading="lazy"/>
+        <div class="project-overlay">
+          <span class="project-num">01</span>
+          <span class="project-cat">Residential · 2024</span>
+          <h3 class="project-name">Rumah Tropis Bogor</h3>
+          <p class="project-loc">📍 Bogor, Jawa Barat</p>
+        </div>
+        <div class="project-arrow">↗</div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1" data-cat="cultural" onclick="openProject(1)">
+        <img class="project-img" src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&q=80&fit=crop" alt="Pusat Kebudayaan Nusantara" loading="lazy"/>
+        <div class="project-overlay">
+          <span class="project-num">02</span>
+          <span class="project-cat">Cultural · 2023</span>
+          <h3 class="project-name">Pusat Kebudayaan Nusantara</h3>
+          <p class="project-loc">📍 Jakarta Selatan</p>
+        </div>
+        <div class="project-arrow">↗</div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-2" data-cat="commercial" onclick="openProject(2)">
+        <img class="project-img" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80&fit=crop" alt="Green Tower BSD" loading="lazy"/>
+        <div class="project-overlay">
+          <span class="project-num">03</span>
+          <span class="project-cat">Commercial · 2023</span>
+          <h3 class="project-name">Green Tower BSD</h3>
+          <p class="project-loc">📍 Tangerang, Banten</p>
+        </div>
+        <div class="project-arrow">↗</div>
+      </div>
+
+      <div class="project-card reveal" data-cat="urban" onclick="openProject(3)">
+        <img class="project-img" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80&fit=crop" alt="Vertical Village Kemang" loading="lazy"/>
+        <div class="project-overlay">
+          <span class="project-num">04</span>
+          <span class="project-cat">Urban Housing · 2022</span>
+          <h3 class="project-name">Vertical Village Kemang</h3>
+          <p class="project-loc">📍 Jakarta Selatan</p>
+        </div>
+        <div class="project-arrow">↗</div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1" data-cat="residential" onclick="openProject(4)">
+        <img class="project-img" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80&fit=crop" alt="Villa Bambu Ubud" loading="lazy"/>
+        <div class="project-overlay">
+          <span class="project-num">05</span>
+          <span class="project-cat">Residential · 2022</span>
+          <h3 class="project-name">Villa Bambu Ubud</h3>
+          <p class="project-loc">📍 Ubud, Bali</p>
+        </div>
+        <div class="project-arrow">↗</div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-2" data-cat="cultural" onclick="openProject(5)">
+        <img class="project-img" src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80&fit=crop" alt="Museum Wayang Digital" loading="lazy"/>
+        <div class="project-overlay">
+          <span class="project-num">06</span>
+          <span class="project-cat">Cultural · 2021</span>
+          <h3 class="project-name">Museum Wayang Digital</h3>
+          <p class="project-loc">📍 Kota Tua, Jakarta</p>
+        </div>
+        <div class="project-arrow">↗</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Project Modal -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeProject()"></div>
+<div class="modal" id="projectModal">
+  <div class="modal-close">
+    <button class="close-btn" onclick="closeProject()">✕ &nbsp; Tutup</button>
+  </div>
+  <div class="modal-body" id="modalBody">
+    <!-- Populated by JavaScript -->
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     SECTION 5 — ACHIEVEMENTS
+══════════════════════════════════════ -->
+<section id="achievements" class="section">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <div class="inner">
+        <div>
+          <div class="label">04 — Achievements</div>
+          <h2 class="display display-md" style="margin-top:.5rem">Pencapaian</h2>
+        </div>
+        <span class="section-num">04</span>
+      </div>
+    </div>
+
+    <div class="achievements-grid">
+
+      <!-- Left column -->
+      <div class="timeline reveal">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2024</div>
+          <div class="timeline-title">Juara 1 — Kompetisi Arsitektur Nasional IAI</div>
+          <div class="timeline-org">Ikatan Arsitek Indonesia · Jakarta</div>
+          <div class="timeline-desc">Desain "Rumah Tropis Masa Depan" yang menggabungkan teknologi passive cooling dengan material lokal terbarukan. Memenangkan kategori desain inovatif.</div>
+          <span class="timeline-badge badge-accent">🏆 Gold Award</span>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2024</div>
+          <div class="timeline-title">Finalist — ARCHMARATHON Indonesia</div>
+          <div class="timeline-org">Archmarathon · International</div>
+          <div class="timeline-desc">Masuk 10 besar dari 200+ peserta dalam kategori Sustainable Design. Proyek "Green Corridor" mendapat apresiasi dari juri internasional.</div>
+          <span class="timeline-badge badge-muted">🌿 Sustainable Design</span>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2023</div>
+          <div class="timeline-title">Best Graduate Thesis — Universitas Indonesia</div>
+          <div class="timeline-org">Fakultas Teknik UI · Depok</div>
+          <div class="timeline-desc">Thesis "Adaptive Architecture for Flood-Prone Areas in Jakarta" mendapat penghargaan sebagai tugas akhir terbaik dengan nilai A+ dari seluruh dewan penguji.</div>
+          <span class="timeline-badge badge-accent">🎓 Best Thesis</span>
+        </div>
+      </div>
+
+      <!-- Right column -->
+      <div class="timeline reveal reveal-delay-2">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2023</div>
+          <div class="timeline-title">Workshop — Parametric Design with Rhino</div>
+          <div class="timeline-org">AA School of Architecture · London (Online)</div>
+          <div class="timeline-desc">Workshop intensif 2 minggu bersama instruktur dari Architectural Association School, mempelajari teknik pemodelan parametrik lanjutan dengan Grasshopper.</div>
+          <span class="timeline-badge badge-muted">📐 Certificate</span>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2022</div>
+          <div class="timeline-title">Pameran — Indonesian Architecture Week</div>
+          <div class="timeline-org">Museum Nasional · Jakarta</div>
+          <div class="timeline-desc">Karya desain dipamerkan dalam Indonesian Architecture Week bersama 30 arsitek terpilih. Mendapat liputan dari media arsitektur nasional.</div>
+          <span class="timeline-badge badge-muted">🖼️ Exhibition</span>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2022</div>
+          <div class="timeline-title">Juara 2 — Urban Design Challenge ASEAN</div>
+          <div class="timeline-org">AXA Investment · Singapore</div>
+          <div class="timeline-desc">Kompetisi redesain kawasan waterfront Jakarta Utara, mengusulkan konsep "Living Waterfront" dengan infrastruktur hijau terintegrasi.</div>
+          <span class="timeline-badge badge-accent">🥈 Silver Award</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     SECTION 6 — GALLERY
+══════════════════════════════════════ -->
+<section id="gallery" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="inner">
+        <div>
+          <div class="label">05 — Gallery</div>
+          <h2 class="display display-md" style="margin-top:.5rem">Galeri Karya</h2>
+        </div>
+        <span class="section-num">05</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full-width masonry -->
+  <div class="masonry" style="padding:0 5%" id="masonryGrid">
+
+    <div class="masonry-item reveal" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Render exterior" loading="lazy"/>
+      <div class="masonry-overlay"><span class="masonry-icon">⊕</span></div>
+    </div>
+
+    <div class="masonry-item reveal reveal-delay-1" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Exterior architecture" loading="lazy"/>
+      <div class="masonry-overlay"><span class="masonry-icon">⊕</span></div>
+    </div>
+
+    <div class="masonry-item reveal reveal-delay-2" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80" alt="Building facade" loading="lazy"/>
+      <div class="masonry-overlay"><span class="masonry-icon">⊕</span></div>
+    </div>
+
+    <div class="masonry-item reveal" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Residential design" loading="lazy"/>
+      <div class="masonry-overlay"><span class="masonry-icon">⊕</span></div>
+    </div>
+
+    <div class="masonry-item reveal reveal-delay-1" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&q=80" alt="Contemporary building" loading="lazy"/>
+      <div class="masonry-overlay"><span class="masonry-icon">⊕</span></div>
+    </div>
+
+    <div class="masonry-item reveal reveal-delay-2" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&q=80" alt="Cultural building" loading="lazy"/>
+      <div class="masonry-overlay"><span class="masonry-icon">⊕</span></div>
+    </div>
+
+    <div class="masonry-item reveal" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Interior space" loading="lazy"/>
+      <div class="masonry-overlay"><span class="masonry-icon">⊕</span></div>
+    </div>
+
+    <div class="masonry-item reveal reveal-delay-1" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1577493340887-b7bfff550145?w=600&q=80" alt="Interior render" loading="lazy"/>
+      <div class="masonry-overlay"><span class="masonry-icon">⊕</span></div>
+    </div>
+
+    <div class="masonry-item reveal reveal-delay-2" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Living space" loading="lazy"/>
+      <div class="masonry-overlay"><span class="masonry-icon">⊕</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightboxImg" src="" alt="Gallery image"/>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     SECTION 7 — CONTACT
+══════════════════════════════════════ -->
+<section id="contact" class="section">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <div class="inner">
+        <div>
+          <div class="label">06 — Contact</div>
+          <h2 class="display display-md" style="margin-top:.5rem">Hubungi Saya</h2>
+        </div>
+        <span class="section-num">06</span>
+      </div>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Info -->
+      <div class="reveal">
+        <h3 class="contact-info-title">
+          Mari Berkolaborasi<br>Bersama
+        </h3>
+        <p class="contact-text">
+          Tertarik untuk berdiskusi tentang proyek, kolaborasi, atau sekadar berbagi inspirasi desain? Saya selalu terbuka untuk percakapan yang bermakna.
+        </p>
+        <div class="contact-channels">
+
+          <a href="https://wa.me/6281234567890" class="contact-channel" target="_blank" rel="noopener">
+            <div class="ch-icon">📱</div>
+            <div>
+              <div class="ch-label">WhatsApp</div>
+              <div class="ch-val">+62 812-3456-7890</div>
+            </div>
+          </a>
+
+          <a href="mailto:aria.rahayu@email.com" class="contact-channel">
+            <div class="ch-icon">✉️</div>
+            <div>
+              <div class="ch-label">Email</div>
+              <div class="ch-val">aria.rahayu@email.com</div>
+            </div>
+          </a>
+
+          <a href="https://instagram.com" class="contact-channel" target="_blank" rel="noopener">
+            <div class="ch-icon">📷</div>
+            <div>
+              <div class="ch-label">Instagram</div>
+              <div class="ch-val">@aria.architecture</div>
+            </div>
+          </a>
+
+          <a href="https://linkedin.com" class="contact-channel" target="_blank" rel="noopener">
+            <div class="ch-icon">💼</div>
+            <div>
+              <div class="ch-label">LinkedIn</div>
+              <div class="ch-val">Aria Rahayu · Architect</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="reveal reveal-delay-2">
+        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+
+          <div class="form-group">
+            <label class="form-label" for="name">Nama Lengkap</label>
+            <input class="form-input" id="name" type="text" placeholder="Budi Santoso" required/>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Alamat Email</label>
+            <input class="form-input" id="email" type="email" placeholder="budi@email.com" required/>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="subject">Subjek</label>
+            <input class="form-input" id="subject" type="text" placeholder="Project Consultation"/>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Pesan</label>
+            <textarea class="form-textarea" id="message" placeholder="Ceritakan tentang proyek atau ide Anda..." required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">
+            Kirim Pesan &nbsp; ↗
+          </button>
+
+          <div class="form-success" id="formSuccess">
+            ✓ Pesan berhasil terkirim! Saya akan membalas dalam 1–2 hari kerja.
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer id="footer">
+  <div class="container">
+
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Aria <span>Rahayu</span></div>
+        <p class="footer-desc">
+          Arsitek &amp; desainer yang berdedikasi untuk menciptakan ruang bermakna yang merespons manusia dan lingkungan.
+        </p>
+        <div class="social-links" style="margin-top:1.8rem">
+          <a href="#" class="social-link" title="Instagram">📷</a>
+          <a href="#" class="social-link" title="LinkedIn">💼</a>
+          <a href="#" class="social-link" title="Behance">🎨</a>
+          <a href="#" class="social-link" title="WhatsApp">📱</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Navigasi</div>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About Me</a>
+          <a href="#skills">Skills</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#achievements">Achievements</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Services</div>
+        <div class="footer-links">
+          <a href="#">Arsitektur Residensial</a>
+          <a href="#">Desain Interior</a>
+          <a href="#">Konsultasi Sustainable</a>
+          <a href="#">Urban Planning</a>
+          <a href="#">3D Visualization</a>
+          <a href="#">Site Analysis</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 Aria Rahayu. All rights reserved. Designed with intention.</span>
+      <div class="social-links">
+        <a href="#" class="social-link">IG</a>
+        <a href="#" class="social-link">LI</a>
+        <a href="#" class="social-link">BE</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="back-top" onclick="window.scrollTo({top:0, behavior:'smooth'})" title="Back to top">↑</button>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>

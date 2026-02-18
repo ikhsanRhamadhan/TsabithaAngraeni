@@ -508,11 +508,7 @@ ul   { list-style: none; }
 .hero-img-badge {
   position: absolute;
   bottom: 2rem; left: -5%;
-<<<<<<< HEAD
-  background: var(--white);
-=======
   background: var(--bg);
->>>>>>> 2837f50 (first update)
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
   padding: 1rem 1.4rem;

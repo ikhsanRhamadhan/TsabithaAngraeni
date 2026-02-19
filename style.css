@@ -201,7 +201,7 @@ ul   { list-style: none; }
 .nav-links a:hover::after,
 .nav-links a.active::after { width: 100%; }
 
-.nav-actions { display: flex; align-items: center; gap: 1rem; }
+.nav-actions { display: flex; align-items: center; gap: 20px; margin-left: auto;}
 
 .theme-btn {
   width: 36px; height: 36px;
@@ -240,44 +240,115 @@ ul   { list-style: none; }
   cursor: pointer;
 }
 .hamburger span {
-  width: 22px; height: 1.5px;
+  width: 22px; height: 2px;
   background: var(--ink);
   border-radius: 1px;
   transition: all var(--trans);
   display: block;
 }
 
-/* ── MOBILE NAV ── */
-.mobile-nav {
-  display: none;
+/* overlay belakang */
+.mobile-overlay {
   position: fixed;
   inset: 0;
+  background: rgba(0,0,0,.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: .3s ease;
+  z-index: 9999;
+}
+
+.mobile-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* sidebar menu */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 80%;
+  max-width: 320px;
+
   background: var(--bg);
-  z-index: 999;
+  border-left: 1px solid var(--border);
+
+  padding: 90px 24px 30px;
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2.5rem;
+  gap: 18px;
+
   transform: translateX(100%);
-  transition: transform var(--trans);
+  transition: .35s ease;
+  z-index: 9999;
 }
-.mobile-nav.open { transform: translateX(0); }
+
+/* pas dibuka */
+.mobile-nav.open {
+  transform: translateX(0);
+}
+
+/* link menu */
 .mobile-nav a {
-  font-family: var(--font-h);
-  font-size: 2.5rem;
-  font-weight: 300;
-  color: var(--ink2);
-  transition: color var(--trans);
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  color: var(--ink);
+  padding: 12px 14px;
+
+  border-radius: 12px;
+  transition: .25s ease;
 }
-.mobile-nav a:hover { color: var(--accent); }
-.mobile-nav-close {
+
+.mobile-nav a:hover {
+  background: var(--bg2);
+  color: var(--accent);
+}
+
+/* tombol close X */
+.mobile-close-btn {
   position: absolute;
-  top: 1.5rem; right: 5%;
-  font-size: 1.5rem;
-  color: var(--ink3);
-  width: 44px; height: 44px;
-  display: grid; place-items: center;
+  top: 18px;
+  right: 18px;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  border: 1px solid var(--border);
+
+  background: var(--bg2);
+  color: var(--ink);
+
+  font-size: 1.3rem;
+  font-weight: 700;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: .25s ease;
 }
+
+.mobile-close-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+/* desktop hide */
+@media (min-width: 769px) {
+  .mobile-nav,
+  .mobile-overlay {
+    display: none;
+  }
+}
+
+
 
 /* ═══════════════════════════════════════════════
    HERO
@@ -1410,3 +1481,28 @@ ul   { list-style: none; }
   .btn-secondary  { justify-content: center; width: 100%; }
   .modal-body     { padding: 1.5rem; }
 }
+
+@media (max-width: 768px) {
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: .8rem; 
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .theme-btn {
+    width: 38px;
+    height: 38px;
+    font-size: .85rem;
+  }
+
+  .hamburger {
+    padding: 20px;
+  }
+}
+
+

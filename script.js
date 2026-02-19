@@ -165,8 +165,16 @@ window.addEventListener('scroll', () => {
 /* ══════════════════════════════════════
    MOBILE NAVIGATION
 ══════════════════════════════════════ */
-function openMobileNav()  { document.getElementById('mobileNav').classList.add('open'); }
-function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); }
+function openMobileNav() {
+  document.getElementById("mobileNav").classList.add("open");
+  document.getElementById("hamburger").style.display = "none";
+}
+
+function closeMobileNav() {
+  document.getElementById("mobileNav").classList.remove("open");
+  document.getElementById("hamburger").style.display = "flex";
+}
+
 
 /* ══════════════════════════════════════
    SCROLL REVEAL (IntersectionObserver)
